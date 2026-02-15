@@ -133,3 +133,53 @@ html {
 .text-online {
     color: #46f154;
 }
+/* --- STYLES DU BLOG (Markdown Content) --- */
+/* On cible tous les éléments HTML à l'intérieur de la div .prose */
+
+.prose h1, .prose h2, .prose h3 {
+  color: white;
+  font-weight: 700;
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+
+.prose h2 { font-size: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 0.5rem; }
+.prose h3 { font-size: 1.25rem; color: #22d3ee; /* cyan-400 */ }
+
+.prose p {
+  margin-bottom: 1.5em;
+  line-height: 1.8;
+}
+
+.prose ul {
+  list-style-type: disc;
+  padding-left: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+.prose li {
+  margin-bottom: 0.5em;
+}
+
+.prose strong {
+  color: #22d3ee; /* cyan-400 */
+  font-weight: 600;
+}
+
+.prose blockquote {
+  border-left: 4px solid #22d3ee;
+  padding-left: 1em;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1rem;
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.prose code {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 0.2em 0.4em;
+  border-radius: 0.25em;
+  font-family: monospace;
+  color: #fca5a5; /* red-300 */
+}
