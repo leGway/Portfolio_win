@@ -1,11 +1,1 @@
-{
-  "version": 4,
-  "routes": {},
-  "dynamicRoutes": {},
-  "notFoundRoutes": [],
-  "preview": {
-    "previewModeId": "a4afc891957f84069cda2ab2474ad865",
-    "previewModeSigningKey": "84a5cd96b3691b78efd8861ff1800e3517e001d1c3a2bf385ecb4f1fe0ff8a90",
-    "previewModeEncryptionKey": "c1058190cf5c54cc9c4ec92d4ea4e44397ae1a6771ca4b7f1e88b11456931764"
-  }
-}
+{"version":4,"routes":{"/blogs/mon-premier-article":{}},"dynamicRoutes":{"/blogs/[id]":{"dataRoute":null,"dataRouteRegex":null,"fallback":false,"fallbackRevalidate":false,"fallbackSourceRoute":"/blogs/[id]","routeRegex":"^\\/blogs\\/([^/]+?)(?:\\/)?$","allowHeader":[]}},"notFoundRoutes":[],"preview":{"previewModeId":"3e6baaa918bf81ada3563c0de114570f","previewModeSigningKey":"11310a1a184c97fb910c8b431d135c1b0c2ffea9ceb0d1669c018c4794c3cf88","previewModeEncryptionKey":"0926287b5627762db16470e2d48b86b9ca0cf0727fe37bd8b07567b4b8468144"}}

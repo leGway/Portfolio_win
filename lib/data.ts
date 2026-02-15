@@ -7,12 +7,13 @@ import {
 
 // --- DEFINITION DES TYPES ---
 
-// ... autres interfaces
 export interface Project {
   name: string;
   description: string;
   image: string;
   link: string;
+  // 👇 C'est ici qu'on définit les catégories autorisées
+  category: 'github' | 'powerbi' | 'design';
 }
 
 export interface Expertise {
@@ -84,23 +85,20 @@ export const words: string[] = [
 
 export const expertiseData: Expertise[] = [
   {
-    icon: Brain, // Icône "Cerveau" pour l'IA
+    icon: Brain,
     title: 'Data Science & AI',
-    // On regroupe ici tout ce qui touche à la donnée et l'intelligence
     content: 'ML Engineer, Data Scientist, Data Analyst, Consultant BI & Prompt Engineer. Je transforme la donnée brute en modèles prédictifs et décisions stratégiques.',
     progress: 90,
   },
   {
-    icon: Terminal, // Icône "Terminal" pour le Dev pur
+    icon: Terminal,
     title: 'Software Engineering',
-    // Le socle technique robuste
     content: 'Software Engineer Full Stack. Conception d\'architectures logicielles scalables, du Backend robuste aux applications Web & Mobile performantes.',
     progress: 80,
   },
   {
-    icon: Palette, // Icône "Palette" pour le Design
+    icon: Palette,
     title: 'Digital Design',
-    // La touche créative
     content: 'Graphics, Motion, Web & Mobile App Designer. Création d\'interfaces centrées utilisateur (UI/UX) et d\'identités visuelles percutantes.',
     progress: 75,
   },
@@ -163,9 +161,9 @@ export const techData: TechSkill[] = [
     progress: 80 
   },
   { 
-    icon: Smartphone, // <-- NOUVEAU BLOC
+    icon: Smartphone,
     title: 'Flutter / Dart', 
-    progress: 75 // Ajuste ce score selon ton niveau réel
+    progress: 75 
   },
 ];
 
@@ -259,7 +257,7 @@ export const hobbiesData: Hobby[] = [
     items: ['Tech monitoring', 'Open Source'],
   },
   {
-    icon: Clapperboard, // <-- Utilise la nouvelle icône ici
+    icon: Clapperboard,
     title: 'Manga / Anime',
     items: ['Shonen', 'Seinen', 'Isekai', 'Slice of Life', 'Action'],
   },
@@ -269,6 +267,7 @@ export const hobbiesData: Hobby[] = [
     items: ['Scientific', 'Sci-fi', 'Tech', 'Personal Development'],
   },
 ];
+
 export const softSkillsData: SoftSkill[] = [
   {
     icon: Users,
@@ -291,20 +290,72 @@ export const softSkillsData: SoftSkill[] = [
     ],
   },
 ];
-// ... tout en bas après softSkillsData
+
+// --- PROJETS CLASSÉS PAR CATÉGORIE ---
 
 export const projectsData: Project[] = [
+  // 1. SECTION GITHUB / DEV
   {
-    name: 'Draavis',
-    description: 'Plateforme SaaS de gestion logistique développée en Next.js et Node.js.',
-    image: '/assets/draavis.png', // Assure-toi d'avoir une image ou mets une placeholder
+    name: 'Draavis SaaS',
+    description: 'Plateforme logistique Full Stack Next.js et Node.js.',
+    image: '/assets/draavis.png',
     link: 'https://draavis.com',
+    category: 'github',
   },
   {
-    name: 'Portfolio V1',
-    description: 'Mon premier site personnel réalisé avec HTML/CSS et JS vanilla.',
+    name: 'Portfolio V2',
+    description: 'Portfolio moderne en Next.js, Tailwind et TypeScript.',
     image: '/assets/portfolio.png',
-    link: 'https://github.com/tonprofil/portfolio-v1',
+    link: 'https://github.com/leGway',
+    category: 'github',
   },
-  // Tu pourras ajouter tes autres projets ici
+
+  // 2. SECTION POWER BI / DATA
+  {
+    name: 'Retail Analytics',
+    description: 'Dashboard interactif des ventes et prévisions (DAX).',
+    image: '', // Laisse vide ou mets un chemin valide
+    link: 'https://powerbi.microsoft.com', // Remplace par ton lien
+    category: 'powerbi',
+  },
+  {
+    name: 'HR Dashboard',
+    description: 'Analyse du turnover et performance employés.',
+    image: '',
+    link: '#',
+    category: 'powerbi',
+  },
+
+  // 3. SECTION DESIGN / GRAPHICS
+  {
+    name: 'Mobile App UI',
+    description: 'Maquette Figma pour une application de livraison.',
+    image: '',
+    link: 'https://dribbble.com', // Remplace par ton lien Dribbble/Behance
+    category: 'design',
+  },
+  {
+    name: 'Brand Identity',
+    description: 'Création de logo et charte graphique Tech.',
+    image: '',
+    link: '#',
+    category: 'design',
+  },
+  // --- SECTION GITHUB ---
+{
+    name: 'Streamlit-DuckDB',
+    description: 'Application web interactive Full Stack Data développée avec Streamlit et DuckDB.',
+    image: '/assets/techs/project1.png', // <-- J'ai retiré "public" ici
+    link: 'https://github.com/leGway/Streamlit-DuckDB',
+    category: 'github',
+  },
+  {
+    name: 'SnowChat AI',
+    description: 'Une application de type Chatbot entièrement hébergée sur Snowflake, développée avec Streamlit et propulsée par le moteur Snowflake Cortex.',
+    image: '/assets/techs/project2.png',
+    link: 'https://github.com/leGway/ChatBootPerso',
+    category: 'github',
+  },
+  
+  // ... tes autres projets PowerBI ou Design suivront ici ...
 ];
